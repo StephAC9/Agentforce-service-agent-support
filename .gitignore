@@ -1,0 +1,15 @@
+# Node
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Env files
+.env
+
+# Build outputs
+dist/
+build/
+
+# OS
+.DS_Store
