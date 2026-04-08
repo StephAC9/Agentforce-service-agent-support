@@ -1,19 +1,15 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Agentforce event overlay backend",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "cor": "^0.0.0",
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "ws": "^8.20.0"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "ws": "^8.16.0"
   }
 }
