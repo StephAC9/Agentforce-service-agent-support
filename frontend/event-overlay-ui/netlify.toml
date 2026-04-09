@@ -3,16 +3,13 @@
   publish = "dist"
 
 [[headers]]
-  for = "/*.js"
+  for = "/assets/*.js"
   [headers.values]
+    Access-Control-Allow-Origin = "*"
     Content-Type = "application/javascript"
 
 [[headers]]
-  for = "/*.mjs"
+  for = "/assets/*.css"
   [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
+    Access-Control-Allow-Origin = "*"
     Content-Type = "text/css"
