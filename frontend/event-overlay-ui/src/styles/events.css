@@ -1,0 +1,58 @@
+/* Overlay root */
+.event-overlay-root {
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header */
+.event-overlay-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.event-overlay-header p {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+/* Event list */
+.event-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Event card */
+.event-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.event-card h2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.description {
+  color: #475569;
+}
+
+/* Meta */
+.event-meta {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Empty state */
+.event-empty {
+  margin-top: 32px;
+  color: #94a3b8;
+}
