@@ -1,0 +1,49 @@
+/**
+ * Queueable job to send event overlay data to Node
+ * Designed for Agentforce Embedded Messaging (fail‑soft)
+ */
+public class OverlayEventCalloutJob
+    implements Queueable, Database.AllowsCallouts {
+
+    private List<SupportEventOverlayDTO> events;
+
+    /**
+     * Constructor
+     */
+    public OverlayEventCalloutJob(List<SupportEventOverlayDTO> events) {
+        this.events = events;
+    }
+
+    /**
+     * Execute method (runs asynchronously)
+     */
+    public void execute(QueueableContext context) {
+
+        // Best‑effort only
+        if (events == null || events.isEmpty()) {
+            return;
+        }
+
+        try {
+            SupportEventOverlayPayload payload =
+                new SupportEventOverlayPayload(events);
+
+            HttpRequest req = new HttpRequest();
+            req.setMethod('POST');
+            req.setEndpoint('https://agentforce-service-agent-support.onrender.com/overlay/events');
+            req.setHeader('Content-Type', 'application/json');
+            req.setTimeout(5000);
+            req.setBody(JSON.serialize(payload));
+            
+            System.debug('🚀 QUEUEABLE CALLOUT FIRING TO NODE');
+
+            new Http().send(req);
+
+        } catch (Exception e) {
+            // ✅ CRITICAL:
+            // Never log
+            // Never rethrow
+            // Never affect Agentforce outcome
+        }
+    }
+}
