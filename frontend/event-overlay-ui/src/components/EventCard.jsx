@@ -1,3 +1,5 @@
+import "../styles/event-card.css";
+
 // ---------- Helpers ----------
 
 function toZonedDate(date, timeZone) {
