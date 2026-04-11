@@ -1,16 +1,30 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 
-window.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("event-overlay-root");
+// ✅ IMPORTANT:
+// Because cssCodeSplit = false, importing CSS here
+// guarantees it is bundled directly into the JS.
+import "./styles/event-card.css";
 
-  if (!root) {
-    console.error("❌ event-overlay-root not found in DOM");
-    return;
-  }
+// --- Find or create the overlay root ---
+let rootEl = document.getElementById("event-overlay-root");
 
-  console.log("✅ event-overlay-root found, mounting React overlay");
+if (!rootEl) {
+  rootEl = document.createElement("div");
+  rootEl.id = "event-overlay-root";
+  rootEl.className = "event-overlay";
+  document.body.appendChild(rootEl);
+}
 
-  ReactDOM.createRoot(root).render(<App />);
-});
+// --- Ensure overlay is visible ---
+rootEl.classList.remove("hidden");
+
+// --- Mount React ---
+createRoot(rootEl).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+console.log("✅ React Event Overlay loaded");
