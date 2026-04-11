@@ -26,8 +26,11 @@
 .event-logo {
   width: 28px;
   height: 28px;
+  max-width: 28px;
+  max-height: 28px;
   object-fit: contain;
   border-radius: 6px;
+  flex-shrink: 0;
 }
 
 .event-title {

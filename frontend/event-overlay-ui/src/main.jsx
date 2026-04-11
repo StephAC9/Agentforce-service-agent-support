@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import "./styles/event-card.css";
 
 window.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("event-overlay-root");
