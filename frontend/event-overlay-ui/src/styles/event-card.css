@@ -1,4 +1,4 @@
-.event-overlay-root .event-card {
+.event-card {
   background: #ffffff !important;
   border: 1px solid #e5e7eb !important;
   border-radius: 10px !important;
@@ -6,7 +6,7 @@
   margin-bottom: 14px !important;
 }
 
-.event-overlay-root .event-logo {
+.event-logo {
   width: 28px !important;
   height: 28px !important;
   max-width: 28px !important;
@@ -16,7 +16,7 @@
   flex-shrink: 0 !important;
 }
 
-.event-overlay-root .event-card-past {
+.event-card-past {
   opacity: 0.55;
   background: #f9fafb;
   border: 1px solid #e5e7eb !important;
@@ -25,27 +25,27 @@
   margin-bottom: 14px !important;
 }
 
-.event-overlay-root .event-card-header {
+.event-card-header {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.event-overlay-root .event-title-row {
+.event-title-row {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 
-.event-overlay-root .event-title {
+.event-title {
   font-size: 15px;
   font-weight: 600;
   color: #111827;
   margin: 0;
 }
 
-.event-overlay-root .event-badges {
+.event-badges {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
