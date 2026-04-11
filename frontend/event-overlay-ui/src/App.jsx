@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { connectWebSocket } from "./ws";
 import EventList from "./components/EventList";
-import "./event-card.css";
-import "./overlay.css";
+import "./styles/event-card.css";
+import "./styles/overlay.css";
 
 console.log("✅ React overlay loaded");
 
