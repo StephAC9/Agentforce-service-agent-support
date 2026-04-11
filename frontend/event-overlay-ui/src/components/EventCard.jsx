@@ -103,7 +103,8 @@ function getRelativeCountdown(startDate, timeZone) {
 
 export default function EventCard({ event }) {
   //const timeZone = event.timeZone || Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const timeZone = "Europe/Paris";
+  const DEFAULT_TIMEZONE = "Europe/Paris";
+  const timeZone = event.timeZone ?? DEFAULT_TIMEZONE;
 
   const dateText = formatEventDate(event.startDate, event.endDate, timeZone);
   const timeText = formatEventTime(event.startDate, event.endDate, timeZone);
