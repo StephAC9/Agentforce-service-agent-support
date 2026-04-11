@@ -1,4 +1,5 @@
 import EventCard from "./EventCard";
+import "../styles/event-card.css";
 
 export default function EventList({ events }) {
   if (!events || events.length === 0) {

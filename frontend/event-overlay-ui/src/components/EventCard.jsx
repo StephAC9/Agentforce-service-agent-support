@@ -1,5 +1,3 @@
-import "../styles/event-card.css";
-
 // ---------- Helpers ----------
 
 function toZonedDate(date, timeZone) {
@@ -104,7 +102,6 @@ function getRelativeCountdown(startDate, timeZone) {
 // ---------- Component ----------
 
 export default function EventCard({ event }) {
-  //const timeZone = event.timeZone || Intl.DateTimeFormat().resolvedOptions().timeZone;
   const DEFAULT_TIMEZONE = "Europe/Paris";
   const timeZone = event.timeZone ?? DEFAULT_TIMEZONE;
 

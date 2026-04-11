@@ -1,5 +1,5 @@
 import EventCard from "./EventCard";
-import "./events.css";
+import "./overlay.css";
 
 export default function EventOverlayPage({ events }) {
   return (
@@ -7,8 +7,8 @@ export default function EventOverlayPage({ events }) {
       <header className="events-header">
         <div className="icon">🛡️</div>
         <div>
-          <h1>Cybersecurity Events</h1>
-          <p>Upcoming events and training sessions</p>
+          <h1>Events</h1>
+          <h3>Here are the events that match your criteria</h3>
         </div>
       </header>
 

@@ -1,0 +1,58 @@
+/* Overlay root */
+.event-overlay-root {
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header */
+.event-overlay-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.event-overlay-header p {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+/* Event list */
+.event-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ✅ pushes button to far end */
+  margin-bottom: 24px;
+}
+
+.event-overlay-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.event-overlay-header h3 {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 400;
+}
+.overlay-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #64748b;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.overlay-close-btn:hover {
+  color: #0f172a;
+}

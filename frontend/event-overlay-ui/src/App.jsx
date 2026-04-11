@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { connectWebSocket } from "./ws";
 import EventList from "./components/EventList";
+import "./event-card.css";
+import "./overlay.css";
 
 console.log("✅ React overlay loaded");
 
@@ -30,8 +32,8 @@ export default function App() {
     <>
       <header className="event-overlay-header">
         <div>
-          <h1>Cybersecurity Events</h1>
-          <p>Upcoming events and training sessions</p>
+          <h1>Events</h1>
+          <h3>Events that match your criteria</h3>
         </div>
 
         <button
