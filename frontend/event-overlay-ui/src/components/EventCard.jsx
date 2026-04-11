@@ -116,6 +116,7 @@ export default function EventCard({ event }) {
   return (
     <article
       className={`event-card ${status === "Past" ? "event-card-past" : ""}`}
+      style="background: #ffffff !important;border: 1px solid #e5e7eb !important;border-radius: 10px !important; padding: 16px !important;margin-bottom: 14px !important;"
     >
       <div className="event-card-header">
         <div className="event-title-row">
@@ -124,6 +125,13 @@ export default function EventCard({ event }) {
               src={event.logoUrl}
               alt={event.name}
               className="event-logo"
+              style="width: 28px !important;
+  height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+  object-fit: contain !important;
+  display: block !important;
+  flex-shrink: 0 !important;"
             />
           )}
           <h3 className="event-title">{event.name}</h3>
